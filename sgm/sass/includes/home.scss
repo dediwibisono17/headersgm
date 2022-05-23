@@ -1,0 +1,400 @@
+@import "../../../CoreGeneral/css/mixins";
+.banner {
+    padding-top: 0;
+    height: 450px;
+    width: auto;
+    @include breakpoint (mobile) {
+        height: 360px;
+    }
+    .slider-banner {
+        // margin: 0 auto;
+        overflow: hidden;
+        text-align: center;
+        picture {
+            height: 100%;
+            width: auto;
+            img {
+                width: 100%;
+                height: 450px;
+                object-fit: cover;
+                @include breakpoint (mobile) {
+                    height: 360px;
+                }
+            }
+        }
+    }
+}
+
+.to-front {
+    position: relative;
+    z-index: 32;
+}
+
+.shortcut-sgm {
+    .slick-next,
+    .slick-prev {
+        top: 35% !important;
+    }
+    .slick-next {
+        right: 0 !important
+    }
+    .slick-prev {
+        left: 0 !important
+    }
+}
+
+section {
+    position: relative;
+    padding: 16px 0;
+    .bg-help {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+     ::-webkit-scrollbar {
+        width: 5px;
+        height: 0;
+        padding-top: 16px;
+        cursor: pointer;
+    }
+     ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+     ::-webkit-scrollbar-thumb {
+        background: rgba($red, .6);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+     ::-webkit-scrollbar-thumb:hover {
+        background: $red;
+    }
+    h2 {
+        margin: 4px 0;
+        padding: 0;
+    }
+    .nav {
+        border-bottom: 1px solid transparent !important;
+        margin: 0 auto;
+        display: table;
+        @include breakpoint (mobile) {
+            display: block;
+            overflow-y: hidden;
+        }
+        li {
+            @include breakpoint (mobile) {
+                display: inline-block;
+                float: initial;
+            }
+        }
+        .active {
+            a {
+                font-family: 'VAG-Rounded-BT' !important;
+                background: linear-gradient(180deg, #D30000 0%, #B70000 100%) !important;
+                color: white !important;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        a {
+            font-family: 'VAG-Rounded-Light' !important;
+            border: 1px solid transparent !important;
+            border-radius: 32px;
+            color: $red;
+            transition: .4s;
+            // font-size: 14px;
+            background: linear-gradient(180deg, #FFF7F7 0%, #FFCBCB 100%);
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+    .tab-pane {
+        position: relative;
+    }
+}
+
+.tool-name {
+    width: 80px;
+    margin: 0 16px 8px;
+    &__text {
+        margin-top: 8px;
+        white-space: normal;
+    }
+    &.shortcut {
+        width: 120px !important;
+    }
+    .img {
+        width: 100%;
+        height: 100%;
+        transition: .2s;
+        &:hover {
+            opacity: .8;
+            +.tool-name__text {
+                color: black;
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.v {
+    &-top {
+        vertical-align: top;
+    }
+}
+
+.d {
+    &-block {
+        display: block;
+    }
+    &-inline-block {
+        display: inline-block;
+    }
+}
+
+.wrap-sgm {}
+
+.no-wrap {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.aktivitas-sgm {
+    .slick-prev {
+        left: -8px !important;
+    }
+    .slick-next {
+        right: -8px !important;
+    }
+}
+
+.arrow {
+    .to {
+        &-left,
+        &-right {
+            position: absolute;
+            background: white;
+            cursor: pointer;
+            color: $red;
+            width: 30px;
+            top: 52px;
+            height: 30px;
+            box-shadow: 0 3px 6px #bbb;
+            border-radius: 50%;
+            text-align: center;
+            padding: 8px;
+            transition: .4s;
+            &:hover {
+                color: red;
+            }
+            i {
+                font-size: 18px !important;
+            }
+        }
+        &-left {
+            left: -8px;
+        }
+        &-right {
+            right: -16px;
+        }
+    }
+}
+
+.wrap {
+    &-small {
+        width: 520px;
+        margin: 8px auto;
+        @include breakpoint(mobile) {
+            width: auto;
+        }
+    }
+    &-sgm {
+        width: 860px;
+        margin: 16px auto;
+        @include breakpoint (mobile) {
+            width: auto;
+        }
+    }
+}
+
+.kgm {
+    &__card {
+        margin: 0 auto;
+        text-align: center;
+        .img {
+            width: auto;
+            height: 141px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        @include breakpoint (mobile) {
+            width: 48%;
+            display: inline-block;
+        }
+    }
+    &__content {
+        text-align: center;
+        h3 {
+            height: 44px;
+            overflow: hidden;
+            @include breakpoint (mobile) {
+                height: auto;
+            }
+        }
+        @include breakpoint (mobile) {
+            text-align: left;
+            vertical-align: top;
+            width: 48%;
+            display: inline-block;
+            word-break: break-word;
+            margin-left: 4px;
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: normal;
+}
+
+h1,
+h2 {
+    font-size: 30px;
+}
+
+.tab-content {
+    margin-top: 16px;
+}
+
+.artikel {
+    .tab-content {
+        @include breakpoint (mobile) {
+            margin-top: 16px;
+        }
+    }
+    .sgm-card {
+        padding: 0;
+        cursor: pointer;
+        overflow: hidden;
+        @include breakpoint (mobile) {
+            box-shadow: none;
+            border-bottom: 1px solid #c9c9c9;
+            padding-bottom: 8px;
+        }
+        &:hover {
+            .img {
+                transform: scale(1.05);
+            }
+            .color-red {
+                color: #ec0c0ce1;
+            }
+        }
+        .img {
+            height: 135px !important;
+            transform-origin: 0 0;
+            transition: transform .25s, visibility .25s ease-in;
+            @include breakpoint (mobile) {
+                width: 35%;
+                display: inline-block;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__content {
+            padding: 16px;
+            @include breakpoint (mobile) {
+                width: 60%;
+                display: inline-block;
+                vertical-align: top;
+                padding: 0 16px;
+            }
+        }
+    }
+}
+
+.shortcut-sgm {
+    .tool-name {
+        margin: 0 4px 8px;
+    }
+}
+
+.kgm {
+    .nav {
+        @include breakpoint (mobile) {
+            display: block;
+            margin: 0 auto;
+        }
+        li {
+            @include breakpoint (mobile) {
+                display: inline-block;
+                width: 48%;
+            }
+        }
+        .active {
+            a {}
+        }
+        a {
+            border-radius: 8px 8px 0 0;
+            margin: 0 4px;
+            background: #f2f2f2;
+            box-shadow: 2px -2px 4px rgba(0, 0, 0, 0.1);
+            font-family: 'VAG-Rounded-BT', serif!important;
+        }
+    }
+}
+
+.produk {
+    &__image {
+        margin: 0 8px;
+    }
+    .slick-slide {
+        margin: 8px;
+    }
+    /* the parent */
+    .slick-list {
+        margin: 8px -8px;
+    }
+    .slick {
+        &-prev {
+            left: -16px !important;
+        }
+        &-next {
+            right: -16px !important;
+        }
+        &-dots {
+            bottom: -24px !important;
+            li {
+                &.slick-active {
+                    button {
+                        &::before {
+                            color: $red !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

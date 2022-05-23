@@ -1,0 +1,132 @@
+@import "../../../CoreGeneral/css/mixins";
+
+.banner-fitur-anak {
+    .breadcrumb {
+        &__wrap {
+            margin-top: 24px;
+            display: flex;
+            &__item {
+                font-family: "VAG-Rounded-Light" !important;
+                font-size: 15px;
+                a {
+                    color: $red;
+                    font-family: "VAG-Rounded-Light" !important;
+                    font-size: 15px;
+                }
+                i {
+                    color: $red;
+                    font-weight: bold;
+                    height: 14px;
+                }
+                margin-right: 10px;
+            }
+            .active {
+                color: $black;
+            }
+        }
+    }
+    .wrap-banner {
+        width: 100%;
+        background-image: url("/sgm/img/banner-fitur-anak.png");
+
+        .wrap-kgm {
+            display: flex;
+            margin-top: 35px;
+            @include breakpoint(mobile) {
+                margin-top: 10px;
+            }
+
+            &__content {
+                h1 {
+                    font-size: 30px;
+                    color: $red;
+
+                    @include breakpoint(mobile) {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            &__img {
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                img {
+                    width: 327px;
+                    height: 208px;
+                    @include breakpoint(mobile) {
+                        width: 89px;
+                        height: 107px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menu-sgm {
+    @include breakpoint(mobile) {
+        margin-top: 20px;
+    }
+    h5 {
+        margin-bottom: 24px;
+    }
+
+    .wrap-sgm {
+        // start of card
+        .sgm-card {
+            display: flex;
+            border-radius: 8px;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+            padding: 24px;
+
+            &__content {
+                @include breakpoint(mobile) {
+                    margin-right: 27px;
+                }
+
+                h5 {
+                    margin: 0;
+                    padding: 0;
+                    @include breakpoint(mobile) {
+                        font-size: 16px;
+                    }
+                }
+                p {
+                    margin-top: 16px;
+                    margin-bottom: 32px;
+                    font-size: 15px;
+
+                    @include breakpoint(mobile) {
+                        font-size: 13px;
+                        margin-top: 8px;
+                        margin-bottom: 16px;
+                    }
+                }
+
+                button {
+                    @include breakpoint(desktop) {
+                        width: 223.28px;
+                    }
+                }
+            }
+
+            &__wrap-img {
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                img {
+                    width: 154px;
+                    height: 154px;
+                }
+                @include breakpoint(mobile) {
+                    img {
+                        width: 81px;
+                        height: 81px;
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,68 @@
+@import "../../../CoreGeneral/css/mixins";
+
+.banner-motherhood {
+    width: 100%;
+    background-image: url("/sgm/img/motherhood-bg.png");
+    .wrap-banner {
+        background: linear-gradient(180deg, rgba(252, 252, 252, 0) 0%, #fcfcfc 60%);
+    }
+
+    @include breakpoint(mobile) {
+        h2 {
+            font-size: 24px;
+            margin-top: 32px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .fase {
+        margin: 24px 0;
+        @include breakpoint(mobile) {
+            margin: 32px 0;
+            font-size: 15px;
+        }
+    }
+}
+
+.artikel {
+    .wrap-subfilter {
+        margin-top: 24px;
+    }
+
+    .sub-2 {
+        margin-bottom: 48px;
+    }
+
+    .wrap-filter {
+        display: flex;
+
+        h5 {
+            margin-bottom: 16px;
+            @include breakpoint(mobile) {
+                font-size: 15px;
+            }
+        }
+        button {
+            border: 1px solid $black;
+            padding: 18px 37px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: "VAG-Rounded-Light" !important;
+            margin-right: 16px;
+            white-space: nowrap;
+            background-color: white !important;
+            @include breakpoint(mobile) {
+                font-size: 16px;
+            }
+            &:focus {
+                border-color: $black;
+            }
+        }
+        .active {
+            border-color: $red !important;
+            color: $red;
+        }
+    }
+}
